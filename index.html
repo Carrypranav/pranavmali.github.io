@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pranav Mali — Data Analyst / AI Enthusiast</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-eyebrow">CINEMATIC PORTFOLIO</div>
+      <h1 class="loader-name">PRANAV MALI</h1>
+      <p class="loader-role">DATA ANALYST/ AI ENTHUSIAST</p>
+      
+      <div class="loader-bar-wrap">
+        <div id="loader-bar" class="loader-bar"></div>
+      </div>
+      
+      <div class="loader-status">
+        <span id="loader-pct">0%</span>
+        <span id="loader-msg">Buffering visual experience...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Navigation & Progress Bar -->
+  <header id="header" class="header">
+    <div class="header-inner">
+      <a href="#intro" class="logo" id="logo-btn">
+        <span class="logo-text">PRANAV MALI</span>
+        <span class="status-indicator" title="Open to Work">
+          <span class="pulse-dot"></span>
+        </span>
+      </a>
+
+      <nav class="nav">
+        <button class="nav-item active" data-target="intro">Home</button>
+        <button class="nav-item" data-target="about">About</button>
+        <button class="nav-item" data-target="work">Work</button>
+        <button class="nav-item" data-target="skills">Skills</button>
+        <button class="nav-item" data-target="resume">Resume</button>
+        <button class="nav-item" data-target="contact">Contact</button>
+      </nav>
+
+      <div class="header-status">
+        <span class="status-badge">Pune · Open to Work</span>
+      </div>
+    </div>
+    
+    <!-- Top Progress Line -->
+    <div class="top-progress-track">
+      <div id="top-progress-bar" class="top-progress-bar"></div>
+    </div>
+  </header>
+
+  <!-- Video Stage (Fixed Full-Screen) -->
+  <div id="stage" class="stage">
+    <div class="stage-feather"></div>
+    <video 
+      id="film" 
+      class="film-video" 
+      playsinline 
+      webkit-playsinline 
+      muted 
+      preload="auto"
+      poster="media/poster.jpg">
+    </video>
+    
+    <!-- Contact SVG Animated Frame (wraps upper body on waving) -->
+    <svg id="contact-svg-frame" class="contact-svg-frame" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <rect id="contact-rect" x="2" y="2" width="96" height="96" rx="6" ry="6"></rect>
+    </svg>
+    <div class="stage-vignette"></div>
+  </div>
+
+  <!-- Content Overlay Layer -->
+  <div id="content-layer" class="content-layer">
+
+    <!-- 01: INTRO SECTION -->
+    <section id="sec-intro" class="section sec-intro">
+      <div class="container intro-container">
+        <div class="intro-eyebrow">HI, I'M</div>
+        <h1 class="intro-name">
+          <span class="name-line line-1">PRANAV</span>
+          <span class="name-line line-2 accent-text">MALI</span>
+        </h1>
+        <p class="intro-role">Data Analyst/ AI Enthusiast</p>
+        <div class="intro-meta">
+          <span class="pulse-pill">
+            <span class="pulse-dot"></span>
+            Pune · Open to Work
+          </span>
+        </div>
+      </div>
+      <div class="scroll-hint" id="scroll-hint">
+        <span class="scroll-hint-text">SCROLL TO BEGIN</span>
+        <div class="scroll-hint-mouse">
+          <div class="mouse-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02: ABOUT SECTION -->
+    <section id="sec-about" class="section sec-about">
+      <div class="container about-container">
+        <div class="glass-panel about-panel">
+          <span class="section-eyebrow">01 — ABOUT</span>
+          <h2 class="section-title">Creating Business intelligence using AI intelligence</h2>
+          <p class="section-description">
+            Exploring the world where data meets curiosity and insights drive decisions. I specialize in designing executive BI dashboards, AI-Assisted Analysis and automating complex workflows into intuitive visual stories.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-num accent-text">4+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num accent-text">2+</span>
+              <span class="stat-label">Years Data Work</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num accent-text">4</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03: WORK SECTION -->
+    <section id="sec-work" class="section sec-work">
+      <div class="container work-container">
+        <div class="work-header">
+          <span class="section-eyebrow">02 — SELECTED WORK</span>
+          <h2 class="section-title">Data Solutions in Action</h2>
+        </div>
+        <div class="cards-carousel" id="project-cards">
+          <!-- Dynamically populated from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 04: SKILLS SECTION -->
+    <section id="sec-skills" class="section sec-skills">
+      <div class="container skills-container">
+        <div class="skills-header">
+          <span class="section-eyebrow">03- CORE EXPERTISE</span>
+          <h2 class="section-title"> Gen AI Mastery</h2>
+          <p class="skills-sub">Acquired & deployed across real-world business intelligence environments.</p>
+        </div>
+        <div class="skills-cloud" id="skills-cloud">
+          <!-- Dynamically populated from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 05: RESUME SECTION -->
+    <section id="sec-resume" class="section sec-resume">
+      <div class="container resume-container">
+        <div id="resume-paper" class="resume-paper">
+          <div class="paper-header">
+            <div>
+              <span class="paper-eyebrow">CURRICULUM VITAE</span>
+              <h2 class="paper-title">PRANAV MALI</h2>
+              <p class="paper-role">Data Analyst / AI Enthusiast</p>
+            </div>
+            <a href="#contact" class="paper-dl-btn" id="resume-btn" download>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV</span>
+            </a>
+          </div>
+
+          <div class="paper-body">
+            <div class="paper-col">
+              <h3 class="paper-sec-title">EXPERIENCE</h3>
+              <div class="resume-item">
+                <div class="item-head">
+                  <span class="item-role">Senior Process Executive</span>
+                  <span class="item-period">2024 — 2026</span>
+                </div>
+                <div class="item-company">Infosys · Pune, India</div>
+                <p class="item-desc">Eliminated manual MIS reporting by engineering a G-AppsScript BI dashboard with automated triggers that  aggregated multi-queue loan data (PCG) to deliver real-time production metrics across onshore & offshore teams.Automated data reporting workflows in Google Sheets using Google Apps Script, leveraging AI-assisted development to accelerate deployment and debugging.</p>
+              </div>
+            </div>
+
+            <div class="paper-col">
+              <h3 class="paper-sec-title">EDUCATION</h3>
+              <div class="resume-item">
+                <div class="item-head">
+                  <span class="item-role">Bachelor of Computer Applications (BCA)</span>
+                  <span class="item-period">2020 — 2023</span>
+                </div>
+                <div class="item-company">Shivaji University · Maharashtra</div>
+                <p class="item-desc">Comprehensive foundation in Technical skills, algorithms, and application logic.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06: CONTACT SECTION -->
+    <section id="sec-contact" class="section sec-contact">
+      <div class="container contact-container">
+        <div class="glass-panel contact-panel">
+          <span class="section-eyebrow">05 — CONNECT</span>
+          <h2 class="section-title">Let's Build Something Intelligent</h2>
+          <p class="section-description">
+            Looking for a Data Analyst who bridges business logic with AI workflows? Let's connect.
+          </p>
+
+          <div class="contact-email-box">
+            <span class="email-label">DIRECT EMAIL</span>
+            <a href="mailto:malipranav1501@gmail.com" class="email-link" id="email-link">
+              malipranav1501@gmail.com
+            </a>
+            <button class="copy-email-btn" id="copy-email-btn" title="Copy Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span id="copy-text">Copy</span>
+            </button>
+          </div>
+
+          <div class="social-links-grid" id="social-links">
+            <!-- Dynamically populated from config.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Scroll Track: Provides height for the scroll-driven mapping -->
+  <div id="scroll-track" class="scroll-track"></div>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
